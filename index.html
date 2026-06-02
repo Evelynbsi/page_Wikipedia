@@ -25,12 +25,21 @@
         align-items: flex-start;
         gap: 20px;
     }
+
+    .texto {
+    flex: 1;
+    }
+
+    .borda-preta img {
+    max-width: 300px;
+    height: auto;
+    }
     
     .borda-preta {
-        border: 0.2px solid #a2a9b1;
-        width: fit-content;
-        background-color: #f8f9fa;;
-        
+    border: 0.2px solid #a2a9b1;
+    background-color: #f8f9fa;
+    max-width: 300px;
+    flex-shrink: 0;
     }
     
     .sistemas {
@@ -87,7 +96,7 @@
     }
 
     .content {
-        max-width: 1440px;
+        max-width: 1800px;
         margin: auto;
         grid-gap: 3rem;
         display: grid;
@@ -115,6 +124,15 @@
     figure {
         text-align: center;
     }
+
+    .caixa-texto {
+    border: 1px solid rgba(0, 0, 0, 0.644);
+    background-color: #f8f9fa;
+    padding: 10px;
+    width: fit-content;
+    }
+
+
     </style>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -139,10 +157,11 @@
             </ul>
         </div>
         <div class="main">
-            <h1 id="Conhecendo o Sistema Operacional">Conhecendo o Sistema Operacional</h1>
+            <h1 id="Conhecendo-o-Sistema-Operacional">Conhecendo o Sistema Operacional</h1>
             <hr>
 
         <div class="img-texto">
+        <div class="texto">
             <p>
                 <strong>Sistema operacional</strong> é um software que gerencia os recursos de um dispositivo, como a memória e o processamento, permite a execução de programas e aplicativos, define qual programa recebe atenção do <strong>processador</strong>, cria um <strong>sistema de arquivos</strong>, 
                 e fornece uma <strong>interface</strong> entre o <strong>computador</strong> e o <strong>usuário</strong>. Embora possa ser executado imediatamente após a máquina ser ligada, a maioria dos computadores pessoais de hoje o executa através de outro programa armazenado em uma memória não-volátil 
@@ -150,24 +169,11 @@
                 discos, etc), o BIOS procura pelo sistema operacional em alguma unidade de armazenamento, geralmente o Disco Rígido, e a partir daí, o sistema operacional "toma" o controle da máquina. O sistema operacional reveza sua execução com a de outros programas, 
                 como se estivesse vigiando, controlando e orquestrando todo o processo computacional.    
             </p>
-            
-            <fieldset class="borda-preta">
 
-            <figure>
-
-                <img src="img/sistemasoperacional.png" alt="Sistema Operacional">
-
-                <figcaption>
-                    Sistema Operacional
-                </figcaption>
-
-            </figure>
-
-            </fieldset>
-        </div>
             <p>
                 Segundo <strong>Tanenbaum</strong>, pela perspectiva do usuário ou programador, existem dois modos distintos de conceituar um sistema operacional:
             </p>
+
             <ul>
                 <li>
                     <u>Numa visão de cima para baixo (top-down):</u> é uma abstração do <strong>hardware</strong>, fazendo o papel de intermediário entre os programas (<strong>software</strong>) e os componentes físicos do computador (<em>hardware</em>); ou
@@ -176,16 +182,28 @@
                     <u>Numa visão de baixo para cima (bottom-up):</u> é um gerenciador de recursos, que controla as aplicações (<strong>processos</strong>) a executar, como, quando e com quais recursos (memória, disco, periféricos).
                 </li>
             </ul>  
+
+        </div>    
+
+            <fieldset class="borda-preta">
+                <figure>
+                    <img src="img/sistemasoperacional.png" alt="Sistema Operacional">
+                    <figcaption>
+                        Sistema Operacional
+                    </figcaption>
+                </figure>
+            </fieldset>
+        </div>
+           
             <p>
                 Um sistema operacional é projetado para ocultar as particularidades de <em>hardware</em> (ditas "de baixo nível") e, com sua atuação, criar uma máquina abstrata que fornece às aplicações serviços compreensíveis ao usuário (ditas "de alto nível").
             </p>
-
+            <br>
             
-            <h2 id="História">História</h2>
+            <h1 id="Historia">História</h1>
             <hr>
             
-        <div class="img-texto">
-        
+        <div class="img-texto">       
         <div class="texto">
             <p>
                 Na primeira geração (aproximadamente 1945-1955), os computadores eram tão grandes que ocupavam salas imensas, ou mesmo andares inteiros. 
@@ -202,31 +220,27 @@
                 Na geração seguinte (aproximadamente 1955-1965), foram criados os sistemas em lote (batch systems), que permitiram um melhor uso dos recursos computacionais.
                 A base do sistema operacional era um programa monitor, usado para enfileirar tarefas (jobs).
             </p>
-
-        </div>
-            <fieldset class="borda-preta">
-
-                <figure>
-
-                    <img src="img/Sistema Operacional em linha de comando.png" alt="Sistemas Operacional em linha de comando">
-                    
-                        <figcaption>
-                            Sistema Operacional em linha de comando                    
-                        </figcaption>
-
-                </figure>
-       
-            </fieldset>
-       
-        </div>
-
             <p>
-                O usuário foi afastado do computador; cada programa era escrito 
-                em cartões perfurados, que por sua vez eram carregados, juntamente com o respectivo <strong>compilador</strong> (normalmente <strong>Fortran</strong> ou <strong>Cobol</strong>), por um operador, usando uma linguagem de controle chamada JCL (job control language).
+                O usuário foi afastado do computador; cada programa era escrito em cartões perfurados, que por sua vez eram carregados, juntamente com o respectivo <strong>compilador</strong> 
+                (normalmente <strong>Fortran</strong> ou <strong>Cobol</strong>), por um operador, usando uma linguagem de controle chamada JCL (job control language).
             </p>
 
             <p>
-                No início da computação os primeiros sistemas operacionais eram únicos, pois cada <strong>mainframe</strong> vendido necessitava de um sistema operacional específico. 
+                No início da computação os primeiros sistemas operacionais eram únicos, pois cada <strong>mainframe</strong> vendido necessitava de um sistema operacional específico.
+            </p>
+        </div>
+
+            <fieldset class="borda-preta">
+                <figure>
+                    <img src="img/Sistema Operacional em linha de comando.png" alt="Sistemas Operacional em linha de comando">
+                    <figcaption>
+                        Sistema Operacional em linha de comando                    
+                    </figcaption>
+                </figure>       
+            </fieldset>       
+        </div>
+
+            <p>                 
                 Esse problema era resultado de arquiteturas diferentes e da linguagem que cada máquina utilizava. Após essa fase, iniciou-se a pesquisa de sistemas operacionais 
                 que automatizassem a troca de tarefas (jobs), pois os sistemas eram monousuários e tinham cartões perfurados como entrada (eliminando, assim, o trabalho de pessoas que eram contratadas apenas para trocar os cartões perfurados).
             </p>
@@ -257,17 +271,13 @@
             <p>
                 No começo da década de 1990, o finlandês <strong>Linus Torvalds</strong>, na altura, estudante de computação, escreveu um comentário numa lista de discussão da <strong>Usenet</strong> dizendo que estava desenvolvendo um núcleo de sistema operacional e perguntou se alguém gostaria de o auxiliar na tarefa. Este foi o primeiro passo em direção ao desenvolvimento do sistema operacional <strong>Linux</strong>.
             </p>
+            <br>
 
-            <h2 id="Visão geral">Visão geral</h2>
+            <h1 id="Visao-geral">Visão geral</h1>
             <hr>
-
-            
-            <p>
-                    
+                  
         <div class="img-texto">
-
         <div class="texto">
-
             <p>
                 Existem vários sistemas operacionais; entre eles, os mais utilizados no dia a dia, normalmente utilizados em computadores domésticos, são o <strong>Windows</strong>, <strong>Linux</strong> e <strong>macOS</strong>.
             </p>
@@ -289,38 +299,33 @@
                 funcionamento normal ou personalizado pelo Administrador. Para que este tipo de conta possa ter acesso a outros conteúdos do disco ou de software, 
                 o administrador poderá personalizar a conta oferecendo permissões a algumas funções do sistema como também poderá retirar acessos a certas áreas do sistema.
             </p>
-
-        </div>
-        
-        <fieldset class="borda-preta">
-
-            <figure>
-                
-                <img src="img/IBM System 360.jpg" alt="IBM System 360">
-                
-                    <figcaption>
-                        OS/360 foi colocado na estrutura principal de todos os computadores IBM no início de 1964, incluindo os computadores que ajudaram a NASA a colocar o homem na lua
-                    </figcaption>
             
-            </figure>
-
-        </fieldset>    
-        
-        </div>
-           
-           
-
             <p>
                 O sistema operacional funciona com a iniciação de <strong>processos</strong> que este irá precisar para funcionar corretamente. Esses processos poderão ser ficheiros que necessitam de ser frequentemente atualizados, ou ficheiros que processam dados úteis para o sistema.
             </p>
-
             <p>
                 Poderemos ter acesso a vários processos do sistema operacional a partir do gestor de tarefas, onde se encontram todos os processos que estão em funcionamento desde o arranque do sistema operacional até a sua utilização atual. 
+            </p>
+        </div>
+        
+        <fieldset class="borda-preta">
+            <figure>                
+                <img src="img/IBM System 360.jpg" alt="IBM System 360">                
+                    <figcaption>
+                        OS/360 foi colocado na estrutura principal de todos os computadores IBM no início de 1964, incluindo os computadores que ajudaram a NASA a colocar o homem na lua
+                    </figcaption>            
+            </figure>
+        </fieldset>            
+        </div>                                 
+
+            <p>
+                
                 Pode-se também visualizar a utilização da memória por cada processo, no caso de o sistema operacional começar a mostrar erros ou falhas de acesso a programas tornando-se lento, pode-se verificar no gestor de tarefas qual dos processos 
                 estará bloqueado ou com elevado número de processamento que está a afetar o funcionamento normal da memória.
             </p>
+            <br>
 
-            <h2 id="Estrutura em camada">Estrutura em camada</h2>
+            <h1 id="Estrutura-em-camada">Estrutura em camada</h1>
             <hr>
 
             <p>
@@ -334,8 +339,9 @@
             <p>
                 O empilhamento de várias camadas de software faz com que cada pedido de uma aplicação demore mais tempo para chegar até o dispositivo periférico ou recurso a ser acessado, prejudicando o desempenho do sistema.
             </p>
+            <br>
 
-            <h2 id="Funcionamento">Funcionamento</h2>
+            <h1 id="Funcionamento">Funcionamento</h1>
             <hr>
 
             <p>
@@ -380,9 +386,7 @@
              <h2>2. Gerenciamento de memória</h2>
 
         <div class="img-texto">
-
         <div class="texto">
-
             <p>
                 O sistema operacional tem acesso completo à memória do sistema e deve permitir que os processos dos usuários tenham acesso seguro à memória quando o requisitam.
              </p>
@@ -397,28 +401,25 @@
                 <li>Possibilitar que uma aplicação utilize mais memória do que a fisicamente existente.</li>
              </ol>
 
+             <h3>Swapping</h3>
+
+             <p>
+                Dentro de gerenciamento de memória, pode não ser possível manter todos os processos em memória, muitas vezes por não existir memória suficiente para alocar aquele processo.
+             </p>
         </div>
 
         <fieldset class="borda-preta">
-
             <figure>
-
                 <img src="img/primeiro servidor.jpg" alt="Servidor">
-
                     <figcapition>
                         O primeiro servidor para <i>WWW</i> rodou em um NeXTSTEP baseado no BSD.
                     </figcapition>
-
             </figure>
-
         </fieldset>
-
         </div>
 
-            <h3>Swapping</h3>
-
             <p>
-                Dentro de gerenciamento de memória, pode não ser possível manter todos os processos em memória, muitas vezes por não existir memória suficiente para alocar aquele processo. Para solucionar esse problema existe um mecanismo chamado <strong>swapping</strong>, onde a gerência de memória reserva uma área do disco para o seu uso em determinadas situações, e um processo é completamente copiado da memória para o disco; 
+                Para solucionar esse problema existe um mecanismo chamado <strong>swapping</strong>, onde a gerência de memória reserva uma área do disco para o seu uso em determinadas situações, e um processo é completamente copiado da memória para o disco; 
                 este processo é retirado da fila do processador e mais tarde será novamente copiado para a memória; Então, o processo ficará ativo na fila novamente. O resultado desse revezamento no disco é que o sistema operacional consegue executar mais processos do que caberia em um mesmo instante na memória. Swapping impõe aos programas um grande custo em termos de tempo de execução, pois é necessário copiar 
                 todo o processo para o disco e mais tarde copiar novamente todo o processo para a memória. Em sistemas onde o usuário interage com o programa durante sua execução, o mecanismo de swapping é utilizado em último caso, quando não se é possível manter todos os processos na memória, visto que a queda no desempenho do sistema é imediatamente sentida pelo usuário.
             </p>
@@ -456,8 +457,9 @@
             <p>
                 Um arquivo é um conjunto de <strong>bytes</strong>, normalmente armazenado em um dispositivo periférico não volátil (p.ex., disco), que pode ser lido e gravado por um ou mais processos.
             </p>
+            <br>
 
-            <h2 id="Interface de uso">Interface de uso</h2>
+            <h1 id="Interface-de-uso">Interface de uso</h1>
             <hr>
 
             <p>
@@ -465,7 +467,7 @@
                 interface para que o usuário possa desfrutar dos recursos do sistema. Atualmente (2009) as principais interfaces de uso são as seguintes:
             </p>
 
-           <h3>Interface de terminal</h3>
+           <h2>Interface de terminal</h2>
 
            <p>
                 A <em>interface</em> de terminal, também chamada de <em>interface de linha de comando</em> ou "CLI" (Command Line Interface) funciona exclusivamente com o teclado. Os comandos são digitados a partir de um <strong>prompt</strong> e são interpretados por um <strong>interpretador de comandos</strong>, 
@@ -476,8 +478,9 @@
                 Usada geralmente por usuários avançados e em atividades específicas, como gerenciamento remoto, utiliza poucos recursos de <em>hardware</em> em comparação a interface gráfica.
            </p>
 
-           <h3>Interface textual</h3>
-
+           <h2>Interface textual</h2>
+        <div class="img-texto">
+        <div class="texto">
            <p>
                 Assim como a interface de terminal, a interface textual também é baseada em texto, porém também tem à disposição um ambiente de trabalho composto por menus, janelas e botões. 
                 Esse tipo de interface tinha um uso difundido em aplicações baseadas no <strong>MS-DOS,</strong> que, inclusive, nas versões mais recentes contava com um gerenciador de programas e arquivos baseados nesse tipo de interface (o DOS Shell).
@@ -491,28 +494,40 @@
                 Nesse tipo de <strong>interface</strong>, também chamada GUI (Graphic User Interface) além de menus, janelas e botões também existem figuras, tanto vetoriais quanto fotografias. O usuário interage com esse tipo de interface usando o mouse, podendo também usar o teclado e teclas de atalho, ou então usando toques e gestos em <strong>touchscreens</strong>. 
                 A interface gráfica permite atuar com algumas aplicações que seriam impossíveis através da linha de comando puramente, como edição de imagem e vídeo.
            </p>
+        </div>
+
+            <fieldset class="borda-preta">
+            <figure>                
+                <img src="img/App-interface-textual.png" alt="Aplicativo com interface textual">                
+                    <figcaption>
+                        Aplicativo com interface textual, rodando no sistema operacional FreeDOS
+                    </figcaption>            
+            </figure>
+        </fieldset>
+        </div>           
            
            <p>
                 Acrescentar facilidade de uso e agilidade é o objetivo da interface gráfica, tendo a desvantagem de consumir muito mais memória que interfaces de linha de comando. Ao contrário das interfaces textuais e de terminal, as interfaces gráficas dependem de um servidor gráfico para funcionar e se comunicar com o sistema, e no caso dos sistemas para desktops e laptops, 
                 inclui um gerenciador de janelas em muitos casos, para que seja possível usar mais de um aplicativo na mesma tela. Em sistemas padrão POSIX é comum existir mais de um ambiente gráfico para o mesmo sistema, podendo ser escolhido a critério do usuário.
            </p>
 
-           <h3>Interface de voz</h3>
+           <h2>Interface de voz</h2>
 
            <p>
                 Interfaces de voz, ou VUI (Voice User Interface), são aquelas em que o usuário interage com o sistema por meio de comandos sonoros. Sendo de desenvolvimento relativamente recente, tem sua aplicação em dispositivos adaptados para pessoa com <strong>deficiência visual</strong> e recentemente têm aparecido também para uso geral em smartphones, tablets e desktops.
            </p>
+           <br>
            
-           <h2 id="Tipos de sistemas">Tipos de sistemas</h2>
+           <h1 id="Tipos-de-sistemas">Tipos de sistemas</h1>
            <hr>
 
-           <h3>Sistema Mono-programado</h3>
+           <h2>Sistema Mono-programado</h2>
 
            <p>
                 Também chamados como sistema mono-tarefa, o sistema operacional mono-programado possui apenas um processador, realiza alocação de memória para somente um processo e um usuário por vez. Apresenta também uma CPU ociosa durante E/S e sua implementação é feita de forma simples.
            </p>
            
-           <h3>Sistema em Lote</h3>
+           <h2>Sistema em Lote</h2>
            
            <p>
                 O sistema em lote é também um sistema monoprocessado e utiliza a linguagem de Controle de Tarefas (JLC). Caracteriza-se por ter programas armazenados em disco ou fita, que uma vez iniciados, exigem pouca ou nenhuma interação do usuário, processando de forma sequencial e contínua até o fim do job, quando então é devolvido o resultado final do processamento.
@@ -522,7 +537,7 @@
                 Exemplos de JLC:
            </p>
            
-           <fieldset>
+           <fieldset class="caixa-texto">
                 <p>
                     // $JOB <br>
                     // $FORTRAN
@@ -535,7 +550,7 @@
             </li>
            <br>
            
-           <fieldset>
+           <fieldset  class="caixa-texto">
                 <p>
                     // $LOAD <br>
                     // $RUN
@@ -550,14 +565,14 @@
 
            <br>
 
-            <fieldset>
+            <fieldset class="caixa-texto">
                 <p>
                     // $END
                 </p>
            </fieldset>
            </ul>
 
-           <h3>Sistema multiprocessadores</h3>
+           <h2>Sistema multiprocessadores</h2>
 
            <p>
                 Os sistemas multiprocessadores – dois ou mais processadores trabalhando juntos – podem ser divididos em duas partes:
@@ -606,7 +621,7 @@
             </li>
            </ul>
 
-           <h3>Sistema Multi-programado para Tempo Real</h3>
+           <h2>Sistema Multi-programado para Tempo Real</h2>
 
            <p>
                 Os sistemas multi-programado para tempo real além de serem sistemas multiprogramados, possuem um tempo de resposta rígido e por isso são muito utilizados no controle de processos. Têm menos time-slice e mais prioridade, ademais, seus processos são ativados por sensores.
@@ -615,8 +630,9 @@
            <p>
                 A aplicação deste tipo de sistema está em máquinas de usinas, refinarias, tráfego aéreo, etc.
            </p>
+           <br>
 
-           <h2 id="Sistemas operacionais modernos">Sistemas operacionais modernos</h2>
+           <h1 id="Sistemas-operacionais-modernos">Sistemas operacionais modernos</h1>
            <hr>
 
            <p>
@@ -630,10 +646,15 @@
            <p>
                 Outra das diferenças que podemos observar entre um sistema operacional e aplicações convencionais é a forma com que suas rotinas são processadas em função do tempo. Um sistema operacional não é executado de forma estruturada. Suas rotinas são executadas concorrentemente em função de eventos assíncronos. Em outras palavras, eventos que podem ocorrer a qualquer momento.
            </p>
+           <br>
 
-           <h2 id="Classificações">Classificações</h2>
+           <h1 id="Classificacoes">Classificações</h1>
+           <hr>
 
-           <h3>Em relação ao seu projeto (arquitetura)</h3>
+        <div class="img-texto">
+        <div class="texto">
+
+           <h2>Em relação ao seu projeto (arquitetura)</h2>
 
            <ul>
             <li>
@@ -652,9 +673,20 @@
                 <strong>Monitor de máquinas virtuais</strong>: fornece uma abstração do hardware para vários sistemas operacionais. Ex.: VM/370, VMware, Xen.
             </li>
            </ul>
+        </div>
 
+            <fieldset class="borda-preta">
+                <figure>                
+                    <img src="img/Command_line.png" alt="Linha de Comando">                
+                        <figcaption>
+                            Um exemplo da linha de comando.
+                        </figcaption>            
+                </figure>
+            </fieldset>
 
-           <h3>Quanto ao gerenciamento de processos</h3>
+        </div>
+
+           <h2>Quanto ao gerenciamento de processos</h2>
 
            <ul>
             <li>
@@ -682,7 +714,7 @@
             </li>
            </ul>
 
-           <h3>Quanto à quantidade de usuários concorrentes</h3>
+           <h2>Quanto à quantidade de usuários concorrentes</h2>
 
            <ul>
             <li>
@@ -692,8 +724,9 @@
                 <strong>Multiusuário</strong>: vários usuários usam o computador ao mesmo tempo, seja por diversos terminais, seja por conexão remota como o SSH. Ex.: Linux, Unix.
             </li>
            </ul>
+           <br>
 
-           <h2 id="Exemplos de sistemas operacionais">Exemplos de sistemas operacionais</h2>
+           <h1 id="Exemplos-de-sistemas-operacionais">Exemplos de sistemas operacionais</h1>
            <hr>
 
            <h3>
@@ -748,27 +781,50 @@
             <li>Windows Mobile</li>
             <li>Harmony OS</li>
            </ul>
+           <br>
 
+           <h1 id="Bibliografia">Bibliografia</h1>
+           <hr>
 
-
-
-           
-
-
+           <ul>
+            <li>
+                BACH, Maurice J. The design of the Unix operating system. Upper Saddle River: Prentice Hall. 1990.
+            </li>
+            <li>
+                BOVET Daniel P.; CESATI, Marco. Understanding de Linux kernel. 3.ed. Sebastopol: O'Reilly. 2005.
+            </li>
+            <li>
+                MCKUSICK, Marshall K.; NEVILLE-NEIL, George V. The design and implementation of the FreeBSD operating system. Upper Saddle River: Addison-Wesley. 2004.
+            </li>
+            <li>
+                RUSSINOVITCH, Mark E.; SOLOMON, David A. Microsoft Windows internals. 4.ed. Redmond: Microsoft Press. 2005.
+            </li>
+            <li>
+                SILBERSCHATZ, Avi; GALVIN, Peter B.; GAGNE, Greg. Operating system concepts. 7.ed. Hoboken: Wiley. 2005.
+            </li>
+            <li>
+                STALLINGS, William. Operating systems: internals and design principles. 5.ed. Upper Saddle River: Pearson Prentice Hall. 2004.
+            </li>
+            <li>
+                TANENBAUM, Andrew. Sistemas operacionais modernos. Rio de Janeiro: LTC. 1999.
+            </li>
+           </ul>
         </div>
+
         <div class="anchors">
             <h2>Conteúdo</h2>
             <ul>
-                <li><a href="#Conhecendo o Sistema Operacional">Conhecendo o Sistema Operacional</a></li>
-                <li><a href="#História">História</a></li>
-                <li><a href="#Visão geral">Visão geral</a></li>
-                <li><a href="#Estrutura em camada">Estrutura em camada</a></li>
+                <li><a href="#Conhecendo-o-Sistema-Operacional">Conhecendo o Sistema Operacional</a></li>
+                <li><a href="#Historia">História</a></li>
+                <li><a href="#Visao-geral">Visão geral</a></li>
+                <li><a href="#Estrutura-em-camada">Estrutura em camada</a></li>
                 <li><a href="#Funcionamento">Funcionamento</a></li>
-                <li><a href="#Interface de uso">Interface de uso</a></li>
-                <li><a href="#Tipos de sistemas">Tipos de sistemas</a></li>
-                <li><a href="#Sistemas operacionais modernos">Sistemas operacionais modernos</a></li>
-                <li><a href="#Exemplos de sistemas operacionais">Exemplos de sistemas operacionais</a></li>
-
+                <li><a href="#Interface-de-uso">Interface de uso</a></li>
+                <li><a href="#Tipos-de-sistemas">Tipos de sistemas</a></li>
+                <li><a href="#Sistemas-operacionais-modernos">Sistemas operacionais modernos</a></li>
+                 <li><a href="#Classificacoes">Classificações</a></li>
+                <li><a href="#Exemplos-de-sistemas-operacionais">Exemplos de sistemas operacionais</a></li>
+                <li><a href="#Bibliografia">Bibliografia</a></li>
 
             </ul>
         </div>
