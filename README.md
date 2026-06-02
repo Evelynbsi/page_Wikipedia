@@ -21,7 +21,7 @@ O projeto foi desenvolvido como atividade prática para aprimorar conhecimentos 
 
 * HTML5
 * CSS3
-
+* JavaScript
 ## Estrutura do Projeto
 
 ```text
@@ -32,8 +32,9 @@ projeto.wikipedia/
 │   ├── sistemasoperacional.png
 │   ├── Sistema Operacional em linha de comando.png
 │   ├── IBM System 360.jpg
-│   └── primeiro servidor.jpg
-│
+│   ├── primeiro servidor.jpg
+│   ├── App-interface-textual.png
+│   └── Command_line.png
 └── README.md
 ```
 
@@ -54,6 +55,17 @@ projeto.wikipedia/
 * Tipos de Sistemas Operacionais
 * Classificações
 * Exemplos de Sistemas Operacionais
+* 
+## Objetivo de Aprendizagem
+
+Este projeto foi desenvolvido para praticar:
+
+* Estruturação de páginas HTML
+* Semântica HTML5
+* Estilização com CSS
+* Manipulação do DOM com JavaScript
+* Organização de conteúdo web
+* Versionamento com Git e GitHub
 
 ## Como Executar
 
