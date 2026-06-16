@@ -70,7 +70,7 @@ Este projeto foi desenvolvido para praticar:
 ## Como Executar
 
 1. Faça o download ou clone este repositório.
-2. Abra o arquivo `index.html` em qualquer navegador moderno.
+2. Abra o arquivo `http://127.0.0.1:5500/projeto_wikipedia/index.html` em qualquer navegador moderno.
 
 ## Objetivo Acadêmico
 
